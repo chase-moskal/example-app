@@ -1,0 +1,20 @@
+{
+	"private": true,
+	"name": "example-app",
+	"version": "0.0.0-dev.0",
+	"description": "a starter kit for making a full-stack app",
+	"scripts": {
+		"test": "exit 0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chase-moskal/example-app.git"
+	},
+	"keywords": [],
+	"author": "Chase Moskal <chasemoskal@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/chase-moskal/example-app/issues"
+	},
+	"homepage": "https://github.com/chase-moskal/example-app#readme"
+}
