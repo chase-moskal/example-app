@@ -1,8 +1,8 @@
 
 import {BuildOptions} from "./types.js"
+import styleCss from "./templates/style.css.js"
 import indexHtml from "./templates/index.html.js"
 import {prepareBuilder} from "../toolbox/prepare-builder.js"
-import styleCss from "./templates/style.css.js"
 
 const options: BuildOptions = {
 	development: process.argv.includes("development")
