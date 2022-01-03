@@ -3,9 +3,9 @@ import {html, render} from "lit"
 
 console.log("🤖 hello")
 
-const element = document.body
+const element = document.querySelector<HTMLDivElement>(".app")
 const content = html`
-	<p>lit-rendered content</p>
+	<p>(lit-rendered content)</p>
 `
 
-render(content, element)
+render(content, element!)

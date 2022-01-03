@@ -10,18 +10,7 @@ export default (options: BuildOptions) => html`
 	<meta name="viewport" content="width=device-width,initial-scale=1"/>
 	<meta name="darkreader" content="dark"/>
 	<title>example-app</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		html {
-			background: #222;
-			color: #aaa;
-			padding: 10%;
-		}
-	</style>
+	<link rel="stylesheet" href="/style.css"/>
 
 	${options.development?
 		html`
@@ -32,10 +21,20 @@ export default (options: BuildOptions) => html`
 		html`
 			<script defer type=module src="/main.bundle.min.js"></script>
 		`}
+
+		<xiome-config
+			app="adf640608628925decea068edb2f89cb92d6bfd1c38f0bb586b567ae1ec8bdc2"
+			api="https://api.stage.xiome.io"
+			platform="https://stage.xiome.io"
+		></xiome-config>
+		<script defer src="https://stage.xiome.io/xiome.bundle.min.js"></script>
 </head>
 <body>
 	<h1>example-app</h1>
 	<div class=app></div>
+	<xiome-login-panel show-logout>
+		<xiome-my-account></xiome-my-account>
+	</xiome-login-panel>
 </body>
 </html>
 
