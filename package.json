@@ -24,7 +24,9 @@
 		"watch-web": "chokidar \"x/web/**/*.js\" -c \"npm run web-debug -s && echo 'rebuilt web'\"",
 		"watch": "run-s web-debug && run-p watch-typescript watch-bundle watch-web",
 		"test": "cynic node --label='test suite' x/tests.test.js",
-		"start": "http-server x"
+		"start-http": "http-server x",
+		"start-api": "node x/server.js",
+		"start": "run-p start-http start-api"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^13.1.2",
@@ -43,6 +45,7 @@
 	"dependencies": {
 		"es-module-shims": "^1.4.1",
 		"lit": "^2.0.2",
+		"renraku": "^0.0.0-dev.50",
 		"rollup-plugin-sizes": "^1.0.4",
 		"xiome": "^0.0.18"
 	},
